@@ -26,7 +26,7 @@ android {
 
 def siteUrl = 'https://github.com/viralypatel/Android-SharedPreferenceHelper'      // Homepage URL of the library
 def gitUrl = 'https://github.com/viralypatel/Android-SharedPreferenceHelper.git'   // Git repository URL
-group = "com.viralypatel"                                        // Maven Group ID for the artifact
+group = "com.viralypatel.sharedpreferencehelper"                                        // Maven Group ID for the artifact
 
 
 install {
