@@ -81,7 +81,7 @@ public class SharedPreferenceHelper {
      * Uses the default shared preferences
      */
     public SharedPreferenceHelper(Context context) {
-        SharedPreferences settings = PreferenceManager.getDefaultSharedPreferences(context);
+        settings = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
     /**
@@ -90,7 +90,7 @@ public class SharedPreferenceHelper {
      * @param preferenceFileName
      */
     public SharedPreferenceHelper(Context context, String preferenceFileName) {
-        SharedPreferences settings = context.getSharedPreferences(preferenceFileName, 0);
+        settings = context.getSharedPreferences(preferenceFileName, 0);
     }
 
     /**
