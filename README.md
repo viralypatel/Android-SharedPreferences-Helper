@@ -51,18 +51,18 @@ If you are customizing it and feel that the customizations are generic and would
 
 ## Usage
 
-> Declaration of `SharedPreferenceHelper` object: (recommended at class level)
+> **Declaration of `SharedPreferenceHelper` object: (recommended at class level)**
 
     SharedPreferenceHelper sph; 
     
-> Instantiation of the `SharedPreferenceHelper` object: (recommended in `onCreate()` method)
+> **Instantiation of the `SharedPreferenceHelper` object: (recommended in `onCreate()` method)**
  
         // use one of the following ways to instantiate
         sph = new SharedPreferenceHelper(this); //this will use default shared preferences
         sph = new SharedPreferenceHelper(this, "myappprefs"); // this will create a named shared preference file
         sph = new SharedPreferenceHelper(this, "myappprefs", 0); // this will allow you to specify a mode
 
-> Putting values into shared preferences
+> **Putting values into shared preferences**
 
 Fairly simple! Unlike the default way (when using the `SharedPreferences` class) you'll **NOT** need to call `.edit()` and `.commit()` ever time.
 
@@ -80,7 +80,7 @@ Fairly simple! Unlike the default way (when using the `SharedPreferences` class)
 
 That's it! Your values are stored in the shared preferences.
 
-> Getting values from shared preferences
+> **Getting values from shared preferences**
 
 Again, just one simple method call with the key name.
 
@@ -92,6 +92,8 @@ Again, just one simple method call with the key name.
 
         // getStringSet is supported only for android versions above HONEYCOMB
         sph.getStringSet("name");
+
+## Advanced Usage
 
 **What if the value is not set for a given key already?** : It returns the default value.
  Default values are as follows:
@@ -116,7 +118,7 @@ Again, just one simple method call with the key name.
         // getStringSet is supported only for android versions above HONEYCOMB
         sph.getStringSet("name", new HashSet<String>());
  
-> Setting default values for each data type when no values are set
+> **Setting default values for each data type when no values are set**
 
 Be careful with this as this will set the default value for the data type.
 
@@ -127,7 +129,7 @@ Be careful with this as this will set the default value for the data type.
         sph.setStringDefaultVal("custom default string");
         sph.setStringSetDefaultVal(new HashSet<String>());
 
-> Registering an `OnSharedPreferenceChangeListener` for the shared preferences 
+> **Registering an `OnSharedPreferenceChangeListener` for the shared preferences** 
 
 Just like you do it for the normal `SharedPreferences` instance:
 
