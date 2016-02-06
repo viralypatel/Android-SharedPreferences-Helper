@@ -23,7 +23,7 @@ Add the following to your module's `build.gradle`:
     dependencies {
         ...
         ...
-        compile(group: 'com.viralypatel.sharedpreferenceshelper', name: 'library', version: '1.1.0', ext: 'aar', ')
+        compile(group: 'com.viralypatel.sharedpreferenceshelper', name: 'library', version: '1.1.0', ext: 'aar')
     }
 
 
