@@ -1,4 +1,4 @@
-package com.viralypatel.sharedpreferencehelper.lib;
+package com.viralypatel.sharedpreferenceshelper.lib;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

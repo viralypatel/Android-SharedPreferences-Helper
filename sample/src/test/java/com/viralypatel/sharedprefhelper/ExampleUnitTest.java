@@ -1,4 +1,4 @@
-package com.viralypatel.sharedpreferencehelper;
+package com.viralypatel.sharedpreferenceshelper;
 
 import org.junit.Test;
 

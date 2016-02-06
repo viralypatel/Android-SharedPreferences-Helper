@@ -1,4 +1,4 @@
-## Android-SharedPreferenceHelper
+## Android-SharedPreferences-Helper
 
 **Simplifies usage of the default Android SharedPreferences Class.**
 
@@ -14,7 +14,7 @@ The developer can do in a few lines of code which otherwise would have required 
 
 ## Installation/Setup
 
-[ ![Download](https://api.bintray.com/packages/viralypatel/maven/Android-SharedPreferenceHelper/images/download.svg) ](https://bintray.com/viralypatel/maven/Android-SharedPreferenceHelper/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/viralypatel/maven/Android-SharedPreferences-Helper/images/download.svg) ](https://bintray.com/viralypatel/maven/Android-SharedPreferences-Helper/_latestVersion)
 
 > ##### Gradle Dependency (recommended)
 
@@ -23,22 +23,22 @@ Add the following to your module's `build.gradle`:
     dependencies {
         ...
         ...
-        compile(group: 'com.viralypatel.sharedpreferencehelper', name: 'library', version: '1.0.0', ext: 'aar', ')
+        compile(group: 'com.viralypatel.sharedpreferenceshelper', name: 'library', version: '1.1.0', ext: 'aar', ')
     }
 
 
 > ##### Maven
 
     <dependency>
-            <groupId>com.viralypatel.sharedpreferencehelper</groupId>
+            <groupId>com.viralypatel.sharedpreferenceshelper</groupId>
             <artifactId>library</artifactId>
-            <version>1.0.0</version>
+            <version>1.1.0</version>
             <type>aar</type>
     </dependency>
 
 > ##### Add aar file locally
 
-You can also download the `library-1.0.0.aar` file from [this page](https://bintray.com/viralypatel/maven/Android-SharedPreferenceHelper/view#files) if you want to add it locally inside the project.
+You can also download the `library-1.0.0.aar` file from [this page](https://bintray.com/viralypatel/maven/Android-SharedPreferences-Helper/view#files) if you want to add it locally inside the project.
 
 > ##### Use the source code
 
@@ -51,16 +51,16 @@ If you are customizing it and feel that the customizations are generic and would
 
 ## Usage
 
-> **Declaration of `SharedPreferenceHelper` object: (recommended at class level)**
+> **Declaration of `SharedPreferencesHelper` object: (recommended at class level)**
 
-    SharedPreferenceHelper sph; 
+    SharedPreferencesHelper sph; 
     
-> **Instantiation of the `SharedPreferenceHelper` object: (recommended in `onCreate()` method)**
+> **Instantiation of the `SharedPreferencesHelper` object: (recommended in `onCreate()` method)**
  
         // use one of the following ways to instantiate
-        sph = new SharedPreferenceHelper(this); //this will use default shared preferences
-        sph = new SharedPreferenceHelper(this, "myappprefs"); // this will create a named shared preference file
-        sph = new SharedPreferenceHelper(this, "myappprefs", 0); // this will allow you to specify a mode
+        sph = new SharedPreferencesHelper(this); //this will use default shared preferences
+        sph = new SharedPreferencesHelper(this, "myappprefs"); // this will create a named shared preference file
+        sph = new SharedPreferencesHelper(this, "myappprefs", 0); // this will allow you to specify a mode
 
 > **Putting values into shared preferences**
 

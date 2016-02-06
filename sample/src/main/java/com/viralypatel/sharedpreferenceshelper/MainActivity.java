@@ -1,18 +1,17 @@
-package com.viralypatel.sharedpreferencehelper;
+package com.viralypatel.sharedpreferenceshelper;
 
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 
-import com.viralypatel.sharedpreferencehelper.lib.SharedPreferenceHelper;
+import com.viralypatel.sharedpreferenceshelper.lib.SharedPreferencesHelper;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class MainActivity extends AppCompatActivity {
 
-    SharedPreferenceHelper sph;
+    SharedPreferencesHelper sph;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         // use one of the following ways to instantiate
-        sph = new SharedPreferenceHelper(this); //this will use default shared preferences
-        sph = new SharedPreferenceHelper(this, "myappprefs"); // this will create a named shared preference file
-        sph = new SharedPreferenceHelper(this, "myappprefs", 0); // this will allow you to specify a mode
+        sph = new SharedPreferencesHelper(this); //this will use default shared preferences
+        sph = new SharedPreferencesHelper(this, "myappprefs"); // this will create a named shared preference file
+        sph = new SharedPreferencesHelper(this, "myappprefs", 0); // this will allow you to specify a mode
 
         // putting values
         sph.putBoolean("boolKey", true);

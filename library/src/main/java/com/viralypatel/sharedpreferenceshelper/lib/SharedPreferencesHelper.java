@@ -1,4 +1,4 @@
-package com.viralypatel.sharedpreferencehelper.lib;
+package com.viralypatel.sharedpreferenceshelper.lib;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -12,7 +12,7 @@ import java.util.Set;
 /**
  * Created by Viral Patel on 01-Feb-16.
  */
-public class SharedPreferenceHelper {
+public class SharedPreferencesHelper {
 
     SharedPreferences settings;
     SharedPreferences.Editor editor;
@@ -80,7 +80,7 @@ public class SharedPreferenceHelper {
     /**
      * Uses the default shared preferences
      */
-    public SharedPreferenceHelper(Context context) {
+    public SharedPreferencesHelper(Context context) {
         settings = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
@@ -89,7 +89,7 @@ public class SharedPreferenceHelper {
      * @param context
      * @param preferenceFileName
      */
-    public SharedPreferenceHelper(Context context, String preferenceFileName) {
+    public SharedPreferencesHelper(Context context, String preferenceFileName) {
         settings = context.getSharedPreferences(preferenceFileName, 0);
     }
 
@@ -99,7 +99,7 @@ public class SharedPreferenceHelper {
      * @param preferenceFileName
      * @param mode
      */
-    public SharedPreferenceHelper(Context context, String preferenceFileName, int mode) {
+    public SharedPreferencesHelper(Context context, String preferenceFileName, int mode) {
         SharedPreferences settings = context.getSharedPreferences(preferenceFileName, mode);
     }
     //endregion

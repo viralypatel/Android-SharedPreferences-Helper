@@ -3,7 +3,7 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 // This is the library version used when deploying the artifact
-version = "1.0.0"
+version = "1.1.0"
 
 android {
     compileSdkVersion 23
@@ -24,9 +24,9 @@ android {
     }
 }
 
-def siteUrl = 'https://github.com/viralypatel/Android-SharedPreferenceHelper'      // Homepage URL of the library
-def gitUrl = 'https://github.com/viralypatel/Android-SharedPreferenceHelper.git'   // Git repository URL
-group = "com.viralypatel.sharedpreferencehelper"                                        // Maven Group ID for the artifact
+def siteUrl = 'https://github.com/viralypatel/Android-SharedPreferences-Helper'      // Homepage URL of the library
+def gitUrl = 'https://github.com/viralypatel/Android-SharedPreferences-Helper.git'   // Git repository URL
+group = "com.viralypatel.sharedpreferenceshelper"                                        // Maven Group ID for the artifact
 
 
 install {
@@ -97,7 +97,7 @@ bintray {
     configurations = ['archives']
     pkg {
         repo = "maven"
-        name = "Android-SharedPreferenceHelper"
+        name = "Android-SharedPreferences-Helper"
         websiteUrl = siteUrl
         vcsUrl = gitUrl
         licenses = ["Apache-2.0"]
