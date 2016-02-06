@@ -38,7 +38,7 @@ Add the following to your module's `build.gradle`:
 
 > ##### Add aar file locally
 
-You can also download the `library-1.0.0.aar` file from [this page](https://bintray.com/viralypatel/maven/Android-SharedPreferences-Helper/view#files) if you want to add it locally inside the project.
+You can also download the `library-<version>.aar` file from [this page](https://bintray.com/viralypatel/maven/Android-SharedPreferences-Helper/view#files) if you want to add it locally inside the project.
 
 > ##### Use the source code
 
