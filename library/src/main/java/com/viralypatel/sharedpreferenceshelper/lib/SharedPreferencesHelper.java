@@ -14,8 +14,7 @@ import java.util.Set;
  */
 public class SharedPreferencesHelper {
 
-    SharedPreferences settings;
-    SharedPreferences.Editor editor;
+    private final SharedPreferences settings;
 
     //region Default Values for various types
     private int intDefaultVal = 0;
@@ -90,7 +89,7 @@ public class SharedPreferencesHelper {
      * @param preferenceFileName
      */
     public SharedPreferencesHelper(Context context, String preferenceFileName) {
-        settings = context.getSharedPreferences(preferenceFileName, 0);
+        this(context, preferenceFileName, 0);
     }
 
     /**
@@ -100,57 +99,47 @@ public class SharedPreferencesHelper {
      * @param mode
      */
     public SharedPreferencesHelper(Context context, String preferenceFileName, int mode) {
-        SharedPreferences settings = context.getSharedPreferences(preferenceFileName, mode);
+        settings = context.getSharedPreferences(preferenceFileName, mode);
     }
     //endregion
 
+    //#TODO Builder Pattern here can be helpful in making the use of this much elegant
     //region Put Methods
     public void putInt(String key, int val) {
-        editor = settings.edit();
-        editor.putInt(key, val);
-        editor.commit();
+        settings.edit().putInt(key, val).commit();
     }
 
     public void putString(String key, String val) {
-        editor = settings.edit();
-        editor.putString(key, val);
-        editor.commit();
+        settings.edit().putString(key, val).commit();
     }
 
     public void putBoolean(String key, boolean val) {
-        editor = settings.edit();
-        editor.putBoolean(key, val);
-        editor.commit();
+        settings.edit().putBoolean(key, val).commit();
     }
 
     public void putFloat(String key, float val) {
-        editor = settings.edit();
-        editor.putFloat(key, val);
-        editor.commit();
+        settings.edit().putFloat(key, val).commit();
     }
 
     public void putLong(String key, long val) {
-        editor = settings.edit();
-        editor.putLong(key, val);
-        editor.commit();
+        settings.edit().putLong(key, val).commit();
     }
 
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public void putStringSet(String key, Set<String> val) {
-        editor = settings.edit();
-        editor.putStringSet(key, val);
-        editor.commit();
+        settings.edit().putStringSet(key, val).commit();
     }
     //endregion
 
     //region Get Methods
-     public Map<String, ?> getAll(){
+    public Map<String, ?> getAll() {
         return settings.getAll();
-     }
+    }
 
     public int getInt(String key, int defaultValue) {
         return settings.getInt(key, defaultValue);
     }
+
     public int getInt(String key) {
         return settings.getInt(key, intDefaultVal);
     }
@@ -158,6 +147,7 @@ public class SharedPreferencesHelper {
     public String getString(String key, String defaultValue) {
         return settings.getString(key, defaultValue);
     }
+
     public String getString(String key) {
         return settings.getString(key, stringDefaultVal);
     }
@@ -165,6 +155,7 @@ public class SharedPreferencesHelper {
     public boolean getBoolean(String key, boolean defaultValue) {
         return settings.getBoolean(key, defaultValue);
     }
+
     public boolean getBoolean(String key) {
         return settings.getBoolean(key, boolDefaultVal);
     }
@@ -172,6 +163,7 @@ public class SharedPreferencesHelper {
     public float getFloat(String key, float defaultValue) {
         return settings.getFloat(key, defaultValue);
     }
+
     public float getFloat(String key) {
         return settings.getFloat(key, floatDefaultVal);
     }
@@ -179,6 +171,7 @@ public class SharedPreferencesHelper {
     public long getLong(String key, long defaultValue) {
         return settings.getLong(key, defaultValue);
     }
+
     public long getLong(String key) {
         return settings.getLong(key, longDefaultVal);
     }
@@ -187,6 +180,7 @@ public class SharedPreferencesHelper {
     public Set<String> getStringSet(String key, Set<String> defaultValue) {
         return settings.getStringSet(key, defaultValue);
     }
+
     @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public Set<String> getStringSet(String key) {
         return settings.getStringSet(key, stringSetDefaultVal);
