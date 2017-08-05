@@ -2,9 +2,11 @@
 
 **Simplifies usage of the default Android SharedPreferences Class.**
 
-The developer can do in a few lines of code which otherwise would have required several. Simple to understand as compared to the default class and easy to use.
+Library size = ~15kb only. The developer can do in a few lines of code which otherwise would have required several. Simple to understand as compared to the default class and easy to use.
 
 ## Salient Features
+
+Library size: Just **~15 KB**
 
 - One line initialization and setup
 - Easily selecting whether to use default preferences or a custom preference file
